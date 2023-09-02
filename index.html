@@ -1,0 +1,187 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration form</title>
+    <style>
+        /*styling text boxes*/
+        input[type=text],input[type=email], input[type=password], input[type=date], input[type=tel], select{
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            resize: vertical;
+            float: right;
+        }
+        /*styling labels*/
+        label{
+            padding: 12px 12px 12px 0;
+            display: inline-block;
+        
+        }
+        /*styling submit button*/
+        input[type=submit]{
+            background-color: rgb(192, 91, 143);
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            float: right;
+        }
+        /*styling container*/
+        .container{
+            align-items: center;
+            max-width: 600px;
+            margin: 0 auto;
+            border-radius: 5px;
+            background-color: lightgray;
+            padding: 20px;
+        }
+        
+        /*floating columns for labels*/
+        .col-25 {
+            float: left;
+            width: 25%;
+            margin-top: 6px;
+        }
+        /*floating columns for input*/
+        .col-75 {
+            float: right;
+            width: 75%;
+            margin-top: 6px;
+        }
+        /*clear floats after column*/
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        /*custom radio button*/
+        .checkmark {
+            position: absolute;
+            top: 0;
+            float: left;
+            height: 25px;
+            width: 25px;
+            background-color: #eee;
+            border-radius: 50%;
+
+        }
+        /*radio button*/
+        .col-75 input[type="radio"] {
+            transform: scale(1.5);
+            margin-left: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <form align="center">
+        <h1>ABC Institute Registration</h1>
+        <p>Enter your admission information below</p>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-25">
+                    <label for="name">Name: </label>
+                </div>
+                <div class="col-75">
+                    <input  type="text" name="name" id="name" placeholder="Enter your name here" required><br><br>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-25">
+                    <label for="fname">Father's Name:</label>
+                </div>
+                <div class="col-75">
+                    <input  type="text" name="fname" id="fname" placeholder="Enter your father's name here" required><br><br>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-25">
+                    <label for="dob">Date of Birth: </label>
+                </div>
+                <div class="col-75">
+                    <input type="date" name="dob" id="dob" required><br><br>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-25">
+                    <label for="gender" required>Gender: </label>
+                </div>
+                <div class="col-75">
+                    <input type="radio" name="gender" id="male" value="male">
+                    <label for="male">Male</label>
+                    <span class="checkmark"></span>
+                    <input type="radio" name="gender" id="female" value="female">
+                    <label for="female">Female</label>
+                    <span class="checkmark"></span><br><br>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-25">
+                    <label for="phone">Phone: </label>
+                </div>
+                <div class="col-75">
+                    <input type="tel" name="phone" id="phone" placeholder="### ### #####" required><br><br>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-25">
+                    <label for="address">Address:</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" name="address" id="stAdd" placeholder="Enter your full address here" required><br>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-25">
+                    <label for="country">Country: </label>
+                </div>
+                <div class="col-75">
+                    <select  id="country" required>
+                        <option value="default">select country</option>
+                        <option value="pakistan">Pakistan</option>
+                        <option value="other">Other</option>
+                    </select><br><br>
+                </div>
+            </div>    
+            
+            <div class="row">
+                <div class="col-25">
+                    <label for="email">Email: </label>
+                </div>
+                <div class="col-75">
+                    <input type="email" name="email" id="email" placeholder="eg.:abc@domain.com" required><br><br>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-25">
+                    <label for="password">Password: </label>
+                </div>
+                <div class="col-75">
+                    <input type="password" name="password" id="password" placeholder="Use strong password" required><br><br>
+                </div>
+            </div>
+            
+            <div class="row">
+                <input type="submit" value="submit">
+            </div>
+        </div>
+
+
+        
+        
+    </form>
+</body>
+</html> 
